@@ -18,7 +18,7 @@
         <h1>To Do List</h1>
         <div class="input-style">
             <form action="/" method="post">
-                <input class="add-btn"type="text" name="title" required>
+                <input class="add-btn"type="text" name="title" autocomplete="off" required>
                 <button type="submit">+</button>
             </form>
             
@@ -28,12 +28,14 @@
     <div class="incomplete-style">
         <h2>New Tasks</h2>
         <ul id="horizontal-list">
+
             {{#incomplete}}
             <li class="todo-list">
                 <form action="/todos/{{id}}" method="POST">
-                <input class="done-btn" type="submit" value="done"></form> {{title}}
+                <input class="done-btn" type="submit" value="x"></form>  {{title}}
             </li>
             {{/incomplete}}
+
         </ul>
     </div>
 
